@@ -30,4 +30,7 @@ public interface IThing {
     @Override
     public boolean equals(Object o);
     
+    @Override
+    public String toString();
+    
 }
