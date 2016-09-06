@@ -23,4 +23,11 @@ public interface IThing {
     
     public void setPickable(boolean pickable);
     
+    public boolean isVisible();
+    
+    public void setVisible(boolean visible);
+    
+    @Override
+    public boolean equals(Object o);
+    
 }
