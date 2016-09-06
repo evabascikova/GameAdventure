@@ -6,7 +6,7 @@ package main;
 
 import interfaces.IGame;
 import logic.Game;
-import uiText.TextoveRozhrani;
+import uiText.TextInterface;
 
 /*******************************************************************************
  * Třída  Start je hlavní třídou projektu,
@@ -26,7 +26,7 @@ public class Start
     {
         
         IGame hra = new Game();
-        TextoveRozhrani ui = new TextoveRozhrani(hra);
-        ui.hraj();
+        TextInterface ui = new TextInterface(hra);
+        ui.play();
     }
 }

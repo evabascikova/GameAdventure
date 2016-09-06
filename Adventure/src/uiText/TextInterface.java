@@ -25,14 +25,14 @@ import interfaces.IGame;
  *@version    pro školní rok 2015/2016
  */
 
-public class TextoveRozhrani {
-    private IGame hra;
+public class TextInterface {
+    private IGame game;
 
     /**
      *  Vytváří hru.
      */
-    public TextoveRozhrani(IGame hra) {
-        this.hra = hra;
+    public TextInterface(IGame game) {
+        this.game = game;
     }
 
     /**
@@ -40,18 +40,18 @@ public class TextoveRozhrani {
      *  příkazu od hráče do konce hry (dokud metoda konecHry() z logiky nevrátí
      *  hodnotu true). Nakonec vypíše text epilogu.
      */
-    public void hraj() {
-        System.out.println(hra.greetings());
+    public void play() {
+        System.out.println(game.greetings());
 
         // základní cyklus programu - opakovaně se čtou příkazy a poté
         // se provádějí do konce hry.
 
-        while (!hra.gameEnd()) {
-            String radek = prectiString();
-            System.out.println(hra.executeCommand(radek));
+        while (!game.gameEnd()) {
+            String row = parseString();
+            System.out.println(game.executeCommand(row));
         }
 
-        System.out.println(hra.ending());
+        System.out.println(game.ending());
     }
 
     /**
@@ -59,7 +59,7 @@ public class TextoveRozhrani {
      *
      *@return    Vrací přečtený příkaz jako instanci třídy String
      */
-    private String prectiString() {
+    private String parseString() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
         return scanner.nextLine();
