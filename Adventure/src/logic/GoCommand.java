@@ -1,5 +1,7 @@
 package logic;
 
+import interfaces.ICommand;
+
 /**
  *  Třída PrikazJdi implementuje pro hru příkaz jdi.
  *  Tato třída je součástí jednoduché textové hry.

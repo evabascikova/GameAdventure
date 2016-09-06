@@ -1,5 +1,7 @@
 package logic;
 
+import interfaces.ICommand;
+
 /**
  *  Třída PrikazNapoveda implementuje pro hru příkaz napoveda.
  *  Tato třída je součástí jednoduché textové hry.

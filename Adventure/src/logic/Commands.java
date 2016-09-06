@@ -1,5 +1,6 @@
 package logic;
 
+import interfaces.ICommand;
 import java.util.HashMap;
 import java.util.Map;
 

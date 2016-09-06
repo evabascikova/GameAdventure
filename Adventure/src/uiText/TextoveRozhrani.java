@@ -2,7 +2,7 @@ package uiText;
 
 
 import java.util.Scanner;
-import logic.IGame;
+import interfaces.IGame;
 /**
  *  Class TextoveRozhrani
  * 

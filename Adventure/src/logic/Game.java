@@ -1,5 +1,8 @@
 package logic;
 
+import interfaces.ICommand;
+import interfaces.IGame;
+
 /**
  *  Třída Hra - třída představující logiku adventury.
  * 

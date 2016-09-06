@@ -1,6 +1,8 @@
 /* Soubor je ulozen v kodovani UTF-8.
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
-package logic;
+package interfaces;
+
+import logic.GamePlan;
 
 
 

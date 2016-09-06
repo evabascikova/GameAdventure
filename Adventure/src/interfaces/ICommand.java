@@ -1,4 +1,4 @@
-package logic;
+package interfaces;
 
 /**
  *  Třída implementující toto rozhraní bude ve hře zpracovávat jeden konkrétní příkaz.
@@ -8,7 +8,7 @@ package logic;
  *@version    pro školní rok 2015/2016
  *  
  */
-interface ICommand {
+public interface ICommand {
 	
 	/**
      *  Metoda pro provedení příkazu ve hře.

@@ -1,5 +1,7 @@
 package logic;
 
+import interfaces.ICommand;
+
 /**
  *  Třída PrikazKonec implementuje pro hru příkaz konec.
  *  Tato třída je součástí jednoduché textové hry.

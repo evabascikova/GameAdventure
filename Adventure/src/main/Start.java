@@ -4,7 +4,7 @@ package main;
 
 
 
-import logic.IGame;
+import interfaces.IGame;
 import logic.Game;
 import uiText.TextoveRozhrani;
 
