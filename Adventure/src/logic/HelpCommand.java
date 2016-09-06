@@ -39,7 +39,7 @@ class HelpCommand implements ICommand {
         + "až k babičce, která bydlí v chaloupce za lesem.\n"
         + "\n"
         + "Můžeš zadat tyto příkazy:\n"
-        + validCommands.vratNazvyPrikazu();
+        + validCommands.getCommandName();
     }
     
      /**

@@ -75,7 +75,7 @@ public class Game implements IGame {
            	parameters[i]= words[i+1];  	
         }
         String result=" .... ";
-        if (validCommands.jePlatnyPrikaz(command)) {
+        if (validCommands.isValidCommand(command)) {
             ICommand commandToExecute = validCommands.getCommand(command);
             result = commandToExecute.execute(parameters);
         }

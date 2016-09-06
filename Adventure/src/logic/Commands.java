@@ -18,7 +18,7 @@ import java.util.Map;
  */
 class Commands {
     // mapa pro uložení přípustných příkazů
-    private  Map<String,ICommand> commandMap;
+    private final  Map<String,ICommand> commandMap;
     
    
     
@@ -43,12 +43,12 @@ class Commands {
      * Vrací odkaz na instanci třídy implementující rozhraní IPrikaz,
      * která provádí příkaz uvedený jako parametr.
      *
-     *@param  retezec  klíčové slovo příkazu, který chce hráč zavolat
+     *@param  command  klíčové slovo příkazu, který chce hráč zavolat
      *@return          instance třídy, která provede požadovaný příkaz
      */
-    public ICommand getCommand(String retezec) {
-        if (commandMap.containsKey(retezec)) {
-            return commandMap.get(retezec);
+    public ICommand getCommand(String command) {
+        if (commandMap.containsKey(command)) {
+            return commandMap.get(command);
         }
         else {
             return null;
@@ -58,12 +58,12 @@ class Commands {
     /**
      * Kontroluje, zda zadaný řetězec je přípustný příkaz.
      *
-     *@param  retezec  Řetězec, který se má otestovat, zda je přípustný příkaz
+     *@param  command  Řetězec, který se má otestovat, zda je přípustný příkaz
      *@return          Vrací hodnotu true, pokud je zadaný
      *                     řetězec přípustný příkaz
      */
-    public boolean jePlatnyPrikaz(String retezec) {
-        return commandMap.containsKey(retezec);
+    public boolean isValidCommand(String command) {
+        return commandMap.containsKey(command);
     }
 
     /**
@@ -71,13 +71,15 @@ class Commands {
      *  
      *  @return     Řetězec, který obsahuje seznam přípustných příkazů
      */
-    public String vratNazvyPrikazu() {
-        String seznam = "";
-        for (String slovoPrikazu : commandMap.keySet()){
-            seznam += slovoPrikazu + " ";
+    public String getCommandName() {
+        String list = "";
+        for (String commandName : commandMap.keySet()){
+            list += commandName + " ";
         }
-        return seznam;
+        return list;
     }
+    
+    
     
 }
 

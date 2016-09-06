@@ -13,17 +13,17 @@ import interfaces.ICommand;
 
 class ExitCommand implements ICommand {
 
-    private static final String NAZEV = "konec";
+    private static final String NAME = "konec";
 
-    private Game hra;
+    private Game game;
 
     /**
      *  Konstruktor třídy
      *  
-     *  @param hra odkaz na hru, která má být příkazem konec ukončena
+     *  @param game odkaz na hru, která má být příkazem konec ukončena
      */    
-    public ExitCommand(Game hra) {
-        this.hra = hra;
+    public ExitCommand(Game game) {
+        this.game = game;
     }
 
     /**
@@ -34,12 +34,12 @@ class ExitCommand implements ICommand {
      */
 
     @Override
-    public String execute(String... parametry) {
-        if (parametry.length > 0) {
+    public String execute(String... parameters) {
+        if (parameters.length > 0) {
             return "Ukončit co? Nechápu, proč jste zadal druhé slovo.";
         }
         else {
-            hra.setGameEnd(true);
+            game.setGameEnd(true);
             return "hra ukončena příkazem konec";
         }
     }
@@ -51,6 +51,6 @@ class ExitCommand implements ICommand {
      */
     @Override
     public String getName() {
-        return NAZEV;
+        return NAME;
     }
 }
