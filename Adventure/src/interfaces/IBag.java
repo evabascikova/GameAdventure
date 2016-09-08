@@ -15,8 +15,12 @@ public interface IBag {
     
     public boolean add(IThing thing);
     
-    public boolean remove(IThing thing);
+    public boolean delete(IThing thing);
     
     public List<IThing> getBag();
+    
+    public void printBag();
+    
+    public IThing get(String name);
     
 }
