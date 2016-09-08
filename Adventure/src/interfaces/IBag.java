@@ -13,9 +13,9 @@ import java.util.List;
  */
 public interface IBag {
     
-    public boolean add(IThing thing);
+    public IThing add(IThing thing);
     
-    public boolean delete(IThing thing);
+    public IThing delete(IThing thing);
     
     public List<IThing> getBag();
     
